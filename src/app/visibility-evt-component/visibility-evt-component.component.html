@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Voici l'événement</h2>
+
+<mat-dialog-content>
+  <div *ngIf="evt">
+    <p><strong>Titre:</strong> {{ evt.titre }}</p>
+    <p><strong>Date de début:</strong> {{ evt.datedebut }}</p>
+    <p><strong>Date de fin:</strong> {{ evt.datefin }}</p>
+    <p><strong>Lieu:</strong> {{ evt.lieu }}</p>
+  </div>
+  <div *ngIf="!evt">
+    <p>Chargement des informations...</p>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button (click)="close()">Fermer</button>
+</mat-dialog-actions>
